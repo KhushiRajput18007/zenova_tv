@@ -1,5 +1,10 @@
 # zenovaTV
+<<<<<<< main
+🎨 Figma Design:
+https://www.figma.com/design/xEcuFyJT8hh50ImO9fXs59/Untitled?node-id=0-1&t=w8b6J8PYgnFVDFnO-1
+=======
 
+>>>>>>> main
 ## Overview
 Zenova TV is a web application that helps users find movies for free by searching through various sources. The platform provides details such as movie titles, descriptions, ratings, and streaming links.
 
@@ -11,6 +16,10 @@ Zenova TV is a web application that helps users find movies for free by searchin
 - 📱 Responsive design for mobile and desktop  
 
 ## Tech Stack
+<<<<<<< main
+
+=======
+>>>>>>> main
 - **Frontend:** HTML, CSS, JavaScript, React.js  
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB  
@@ -27,7 +36,11 @@ Ensure you have the following installed on your system:
 ### Steps
 1. Clone the repository:  
    ```bash
+<<<<<<< main
+   git clone https://github.com/KhushiRajput18007/zenova-tv.git
+=======
    git clone https://github.com/yourusername/zenova-tv.git
+>>>>>>> main
    cd zenova-tv
    ```
 2. Install dependencies:  
@@ -37,8 +50,12 @@ Ensure you have the following installed on your system:
 3. Set up environment variables:  
    Create a `.env` file in the root directory and add:  
    ```env
+<<<<<<< main
+  MONGODB_URI=mongodb+srv://khushirajputcg:tH5N8A9faAPcM8Np@cluster0.cxpuc.mongodb.net/ZenovaTV?retryWrites=true&w=majority&appName=Cluster0
+=======
    MONGO_URI=your_mongodb_connection_string
    API_KEY=your_movie_api_key
+>>>>>>> main
    ```
 4. Start the development server:  
    ```bash
