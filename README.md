@@ -1,6 +1,7 @@
 # zenovaTV
 🎨 Figma Design:
 https://www.figma.com/design/xEcuFyJT8hh50ImO9fXs59/Untitled?node-id=0-1&t=w8b6J8PYgnFVDFnO-1
+
 ## Overview
 Zenova TV is a web application that helps users find movies for free by searching through various sources. The platform provides details such as movie titles, descriptions, ratings, and streaming links.
 
@@ -12,7 +13,6 @@ Zenova TV is a web application that helps users find movies for free by searchin
 - 📱 Responsive design for mobile and desktop  
 
 ## Tech Stack
-
 - **Frontend:** HTML, CSS, JavaScript, React.js  
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB  
@@ -40,6 +40,7 @@ Ensure you have the following installed on your system:
    Create a `.env` file in the root directory and add:  
    ```env
   MONGODB_URI=mongodb+srv://khushirajputcg:tH5N8A9faAPcM8Np@cluster0.cxpuc.mongodb.net/ZenovaTV?retryWrites=true&w=majority&appName=Cluster0
+   
    ```
 4. Start the development server:  
    ```bash
