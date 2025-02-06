@@ -1,24 +1,42 @@
-require('dotenv').config();
-const express = require('express');
-const connectDB = require('./db');
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import { connectDB } from "./config/db.js";
+import userRouter from "./Routes/UserRouter.js"; // Fixed spacing issue
+import { errorHandler } from "./middlewares/errorMiddleware.js"; // Fixed folder name
+
+dotenv.config();
+
+// Initialize Express App
 const app = express();
 
-// Connect to database first
-connectDB();
-
 // Middleware
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
-// Routes
-app.use('/api/content', require('./routes/content'));
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/comments', require('./routes/comments'));
+// Connect to Database
+connectDB()
+  .then(() => console.log("✅ Database connected successfully"))
+  .catch((error) => {
+    console.error("❌ Database connection failed:", error.message);
+    process.exit(1); // Exit i.jsf DB connection fails
+  });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-// Add this error handler at the end of app.js
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
+// Basic API Route
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
+// User Routes
+app.use("/api/user", userRouter);
+
+// Error Handling Middleware
+app.use(errorHandler);
+
+// Define Port
+const PORT = process.env.PORT || 5000;
+
+// Start Server
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
